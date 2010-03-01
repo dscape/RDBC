@@ -1,0 +1,52 @@
+Ideas
+'''''
+  1) Supporting compression (gzip) would be nice for put, get and post
+     but requires a slightly more complicated client (and server)
+  2) Application level security allows protecting some calls while
+     leaving others unprotected
+  
+Sample Invocations
+''''''''''''''''''
+
+  1) Create file one.xml (you need an xml file named one.xml in the working directory)
+
+     curl \
+       --request POST \
+       --data "@one.xml" \
+       --anyauth \
+       http://user:pwd@localhost:8010/doc/one.xml
+
+ 2) Update file book.xml (you need an xml file named two.xml in the working directory)
+
+    curl \
+      --request PUT \
+      --data "@two.xml" \
+      --anyauth \
+      http://user:pwd@localhost:8010/doc/one.xml
+
+ 3) Get file book.xml in json
+
+    curl \
+      --header "Accept: application/json" \
+      --anyauth \
+      http://user:pwd@localhost:8010/doc/one.xml 
+
+ 4) Get file book.xml
+ 
+    curl \
+      --anyauth \
+      http://user:pwd@localhost:8010/doc/one.xml 
+
+ 5) Delete file one.xml
+
+  curl \
+     --request DELETE \
+     --anyauth \
+     http://user:pwd@localhost:8010/doc/one.xml
+
+  6) An invalid route
+  
+     curl \
+       --header "Accept: application/json" \
+       --anyauth \
+       http://user:pwd@localhost:8010

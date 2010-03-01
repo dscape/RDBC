@@ -1,0 +1,9 @@
+<opts>
+  <host> localhost </host>
+  <port> 3010 </port>
+  <format> xml </format>
+  <basic-auth>
+    <username> sample </username>
+    <password> user </password>
+  </basic-auth>
+</opts>
