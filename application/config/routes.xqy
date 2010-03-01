@@ -11,7 +11,7 @@ declare variable $routes :=
       <rdbc:match nr="3">db</rdbc:match>
       <rdbc:match nr="5">doc</rdbc:match>
     </rdbc:resource>
-    <rdbc:verb>get</rdbc:verb>
+    <rdbc:verb>get</rdbc:verb>  
     <rdbc:verb>put</rdbc:verb>
     <rdbc:verb>post</rdbc:verb>
     <rdbc:verb>delete</rdbc:verb>
